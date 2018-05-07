@@ -1,0 +1,28 @@
+{
+	"name": "Open all GR",
+	"version": "0.1",
+	"description": "Open all Google Result with dbl-click",
+  "icons": {
+    "16": "images/open_all_gr.png",
+    "32": "images/open_all_gr.png",
+    "48": "images/open_all_gr.png",
+    "128": "images/open_all_gr.png"
+  },
+
+  "permissions": [ "storage","tabs","activeTab"],
+  "manifest_version": 2,
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+   {
+     "matches": ["https://www.google.com/*"],
+     "js": ["grab_links.js"]
+   }
+ ]
+
+
+}
